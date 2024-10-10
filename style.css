@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+}
+
+.gallery .emoji-block {
+    background-color: #ffffff; /* White background for blocks */
+    border: 1px solid #ccc; /* Light border for blocks */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Inner spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center text within blocks */
+    transition: transform 0.3s; /* Animation for hover effect */
+}
+
+.gallery .emoji-block:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+h1 {
+    margin: 20px 0;
+    text-align: center; /* Center the heading */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+}
